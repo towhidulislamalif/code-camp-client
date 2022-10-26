@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/logo/logo63.png';
@@ -12,25 +11,27 @@ function Header() {
           <Link rel="noopener noreferrer" to="/" aria-label="Homepage">
             <img src={logo} alt="" />
           </Link>
-          <div className="items-center hidden space-x-6 md:flex">
-            <div className="space-x-3">
+          <div className="items-center hidden space-x-4 md:flex">
+            <div className="space-x-2">
               <Link rel="noopener noreferrer" to="/catalog">
                 Catalog
               </Link>
               <Link rel="noopener noreferrer" to="/pricing">
                 Pricing
               </Link>
-              <Link rel="noopener noreferrer" to="/blog">
-                Blog
+              <Link rel="noopener noreferrer" to="/blogs">
+                Blogs
               </Link>
               <Link rel="noopener noreferrer" to="/faq">
                 Faq
               </Link>
             </div>
-            <button className="px-3 py-2 rounded-md bg-violet-400 text-gray-900">
-              Log in
-            </button>
-            <button className="px-3 py-2 rounded-md bg-gray-400 text-gray-900">
+            <Link to="/login">
+              <button className="px-2 py-2 rounded-md bg-violet-400 text-gray-900">
+                Log in
+              </button>
+            </Link>
+            <button className="px-2 py-2 rounded-md bg-gray-400 text-gray-900">
               Log out
             </button>
           </div>
