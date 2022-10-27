@@ -17,10 +17,7 @@ function Sidebar() {
       {sidebar.map((nav) => {
         const { id, path } = nav;
         return (
-          <div
-            key={id}
-            className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-400"
-          >
+          <div key={id} className="text-center sm:text-left mb-14 ">
             <Link
               to={`/topic/${id}`}
               className="text-sm font-bold tracking-wider uppercase text-gray-400"
