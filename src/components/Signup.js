@@ -21,22 +21,24 @@ function Signup() {
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    console.log(name, photo, email, password);
+    // console.log(name, photo, email, password);
 
     // create user with email and password
     signup(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
+
+        // form reset
+        event.target.reset();
 
         // update a user's profile
         profile(name, photo)
           .then()
           .catch((error) => {
-            setError(error.message);
+            const errorMessage = error.message;
+            setError(errorMessage);
           });
-        // form reset
-        event.target.reset();
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -49,7 +51,7 @@ function Signup() {
     googleSignin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -62,7 +64,7 @@ function Signup() {
     githubSignin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
       })
       .catch((error) => {
         const errorMessage = error.message;

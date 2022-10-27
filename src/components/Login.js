@@ -1,8 +1,9 @@
-import { clear } from '@testing-library/user-event/dist/clear';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
+
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 import { AuthContext } from '../context/AuthProvider';
 
 function Login() {
@@ -23,12 +24,12 @@ function Login() {
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    console.log(email, password);
+    // console.log(email, password);
 
     // signin with email and password
     signin(email, password)
       .then((userCredential) => {
-        // const user = userCredential.user;
+        const user = userCredential.user;
 
         navigate(from, { replace: true });
 
@@ -46,7 +47,9 @@ function Login() {
     googleSignin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
+
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -59,7 +62,9 @@ function Login() {
     githubSignin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
+
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -104,9 +109,7 @@ function Login() {
             />
             <div className="flex justify-between text-xs text-gray-400">
               <h1 className=" font-bold text-center text-red-400">{error}</h1>
-              <Link rel="noopener noreferrer" to="/forgotpassword">
-                Forgot Password?
-              </Link>
+              <p rel="noopener noreferrer">Forgot Password?</p>
             </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">
