@@ -1,4 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import codecamp from '../assets/image/codecamp.webp';
+import teammovement from '../assets/image/teammovement.webp';
+import teamsupport from '../assets/image/teamsupport.webp';
 
 function Home() {
   return (
@@ -6,58 +11,51 @@ function Home() {
       <div className="p-6 space-y-8">
         <main>
           <div className="container mx-auto space-y-16">
-            <section className="grid gap-6 text-center lg:grid-cols-2 xl:grid-cols-5">
-              <div className="w-full p-6 rounded-md sm:p-16 xl:col-span-2 bg-gray-900">
-                <span className="block mb-2 text-violet-400">
-                  Mamba design system
-                </span>
-                <h1 className="text-5xl font-extrabold text-gray-50">
-                  Build it with Mamba
-                </h1>
-                <p className="my-8">
-                  <span className="font-medium text-gray-50">
-                    Modular and versatile.
-                  </span>
-                  The ultimate design toolkit for savvy technology startups.
-                </p>
-                <form
-                  novalidate=""
-                  action=""
-                  className="self-stretch space-y-3 ng-untouched ng-pristine ng-valid"
-                >
-                  <div>
-                    <label for="name" className="text-sm sr-only">
-                      Your name
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      placeholder="Your name"
-                      className="w-full rounded-md focus:ring focus:ring-violet-400 border-gray-700"
-                    />
+            <section className="bg-gray-800 text-gray-100">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                  <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+                    Ac mattis
+                    <span className="text-violet-400">senectus</span>erat
+                    pharetra
+                  </h1>
+                  <p className="mt-6 mb-8 text-lg sm:mb-12">
+                    Dictum aliquam porta in condimentum ac integer
+                    <br className="hidden md:inline lg:hidden" />
+                    turpis pulvinar, est scelerisque ligula sem
+                  </p>
+                  <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <Link
+                      rel="noopener noreferrer"
+                      to="/career"
+                      className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 text-gray-900"
+                    >
+                      Explore Career Path
+                    </Link>
+                    <Link
+                      rel="noopener noreferrer"
+                      to="/signup"
+                      className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 text-gray-900"
+                    >
+                      Sign Up
+                    </Link>
+                    <Link
+                      rel="noopener noreferrer"
+                      to="/login"
+                      className="px-8 py-3 text-lg font-semibold border rounded border-gray-100"
+                    >
+                      Log In
+                    </Link>
                   </div>
-                  <div>
-                    <label for="lastname" className="text-sm sr-only">
-                      Email address
-                    </label>
-                    <input
-                      id="lastname"
-                      type="text"
-                      placeholder="Email address"
-                      className="w-full rounded-md focus:ring focus:ring-violet-400 border-gray-700"
-                      data-temp-mail-org="0"
-                    />
-                  </div>
-                  <button className="w-full py-2 font-semibold rounded bg-violet-400 text-gray-900">
-                    Join the waitlist
-                  </button>
-                </form>
+                </div>
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                  <img
+                    src={codecamp}
+                    alt=""
+                    className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+                  />
+                </div>
               </div>
-              <img
-                src="https://source.unsplash.com/random/480x360"
-                alt=""
-                className="object-cover w-full h-full rounded-md xl:col-span-3 bg-gray-500"
-              />
             </section>
             <section>
               <span className="block mb-2 text-xs font-medium tracking-widest uppercase lg:text-center text-violet-400">
@@ -96,68 +94,11 @@ function Home() {
                 </div>
               </div>
             </section>
-            <section className="grid gap-6 lg:grid-cols-2">
-              <img
-                src="https://source.unsplash.com/random/360x480"
-                alt=""
-                className="object-cover w-full rounded-md max-h-96 bg-gray-500"
-              />
-              <div className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-8 bg-gray-900">
-                <img
-                  src="https://source.unsplash.com/random/100x100"
-                  alt=""
-                  className="object-cover w-20 h-20 rounded-full bg-gray-500"
-                />
-                <blockquote className="max-w-lg text-lg italic font-medium text-center">
-                  "Et, dignissimos obcaecati. Recusandae praesentium doloribus
-                  vitae? Rem unde atque mollitia!"
-                </blockquote>
-                <div className="text-center text-gray-400">
-                  <p>Leroy Jenkins</p>
-                  <p>CEO of Company Co.</p>
-                </div>
-                <div className="flex space-x-2">
-                  <button
-                    type="button"
-                    aria-label="Page 1"
-                    className="w-2 h-2 rounded-full bg-gray-50"
-                  ></button>
-                  <button
-                    type="button"
-                    aria-label="Page 2"
-                    className="w-2 h-2 rounded-full bg-gray-600"
-                  ></button>
-                  <button
-                    type="button"
-                    aria-label="Page 3"
-                    className="w-2 h-2 rounded-full bg-gray-600"
-                  ></button>
-                  <button
-                    type="button"
-                    aria-label="Page 4"
-                    className="w-2 h-2 rounded-full bg-gray-600"
-                  ></button>
-                </div>
-              </div>
-              <div className="p-8 space-y-8 rounded-md lg:col-span-full lg:py-12 bg-gray-900">
-                <h2 className="text-5xl font-bold text-gray-50">
-                  Create with us
-                </h2>
-                <p className="text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Nesciunt facilis quod accusantium beatae cum nam adipisci
-                  reiciendis omnis possimus error quo animi voluptas magni, at
-                  incidunt. Nulla ex at ullam corporis quidem adipisci vitae,
-                  perferendis dolorem libero minus atque tenetur enim pariatur
-                  cupiditate commodi in beatae, ipsa eligendi? Quis, saepe.
-                </p>
-              </div>
-            </section>
             <section>
               <div className="grid gap-6 lg:grid-cols-3">
                 <div className="overflow-hidden rounded lg:flex lg:col-span-3">
                   <img
-                    src="https://source.unsplash.com/random/485x365"
+                    src={teammovement}
                     alt=""
                     className="object-cover w-full h-auto max-h-96 bg-gray-500"
                   />
@@ -206,13 +147,8 @@ function Home() {
                 <h2 className="text-5xl font-bold text-center">
                   Our team is here to help you.
                 </h2>
-                <div className="flex justify-center p-4">
-                  <a rel="noopener noreferrer" href="#">
-                    Meet our crew &gt;
-                  </a>
-                </div>
                 <img
-                  src="https://source.unsplash.com/random/360x240"
+                  src={teamsupport}
                   alt=""
                   className="object-cover w-full h-auto mt-8 rounded max-h-96 bg-gray-500"
                 />

@@ -10,7 +10,6 @@ import Pricing from '../components/Pricing';
 import Blogs from '../components/Blogs';
 import Faq from '../components/Faq';
 import Login from '../components/Login';
-import ForgotPassword from '../components/ForgotPassword';
 import Signup from '../components/Signup';
 
 const router = createBrowserRouter([
@@ -67,10 +66,6 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
-      },
-      {
-        path: '/forgotpassword',
-        element: <ForgotPassword />,
       },
       {
         path: '/signup',
