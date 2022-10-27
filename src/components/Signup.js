@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 
 function Signup() {
@@ -11,6 +11,11 @@ function Signup() {
     useContext(AuthContext);
 
   const [error, setError] = useState('');
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   // submit form
   const handleSubmit = (event) => {
@@ -27,7 +32,9 @@ function Signup() {
     signup(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        // console.log(user);
+        console.log(user);
+
+        navigate(from, { replace: true });
 
         // form reset
         event.target.reset();
@@ -51,7 +58,9 @@ function Signup() {
     googleSignin()
       .then((result) => {
         const user = result.user;
-        // console.log(user);
+        console.log(user);
+
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -64,7 +73,8 @@ function Signup() {
     githubSignin()
       .then((result) => {
         const user = result.user;
-        // console.log(user);
+        console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;

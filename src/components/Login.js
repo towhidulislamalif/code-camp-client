@@ -30,6 +30,7 @@ function Login() {
     signin(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        console.log(user);
 
         navigate(from, { replace: true });
 
@@ -47,7 +48,7 @@ function Login() {
     googleSignin()
       .then((result) => {
         const user = result.user;
-        // console.log(user);
+        console.log(user);
 
         navigate(from, { replace: true });
       })
@@ -62,7 +63,7 @@ function Login() {
     githubSignin()
       .then((result) => {
         const user = result.user;
-        // console.log(user);
+        console.log(user);
 
         navigate(from, { replace: true });
       })
