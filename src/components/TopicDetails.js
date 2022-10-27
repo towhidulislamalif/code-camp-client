@@ -1,15 +1,22 @@
 import React from 'react';
+import { useRef } from 'react';
+
 import { Link, useLoaderData } from 'react-router-dom';
 
+import ReactPrint from 'react-to-print';
+
 function TopicDetails() {
+  const ref = useRef();
+
   const topic = useLoaderData();
-  console.log(topic);
+  // console.log(topic);
   const { duration, description, earn, id, img, path, pricing } = topic;
 
   return (
     <section className="min-h-screen bg-gray-800 text-gray-100">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <div
+          ref={ref}
           rel="noopener noreferrer"
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900"
         >
@@ -44,12 +51,17 @@ function TopicDetails() {
               Get Premium Access
             </button>
           </Link>
-          <button
-            type="button"
-            className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-900 text-gray-400"
-          >
-            Load more posts...
-          </button>
+          <ReactPrint
+            trigger={() => (
+              <button
+                type="button"
+                className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-900 text-gray-400"
+              >
+                Download to pdf
+              </button>
+            )}
+            content={() => ref.current}
+          />
         </div>
       </div>
     </section>

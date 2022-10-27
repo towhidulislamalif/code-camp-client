@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 function Checkout() {
   const topic = useLoaderData();
-  const { earn, experience, path } = topic;
+  const { earn, path } = topic;
 
   return (
     <section className="min-h-screen py-6 bg-gray-800 text-gray-50">
