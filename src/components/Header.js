@@ -13,9 +13,7 @@ function Header() {
 
   // signout a user
   const handleSignout = () => {
-    signout()
-      .then()
-      .catch((error) => console.error(error));
+    signout().then().catch();
   };
 
   return (
@@ -23,12 +21,15 @@ function Header() {
       <div className="p-6 space-y-6">
         <header className="container flex items-center justify-between h-16 px-4 mx-auto rounded bg-gray-900">
           <Link rel="noopener noreferrer" to="/" aria-label="Homepage">
-            <img className="w-12" src={logo} alt="" />
+            <div className="flex flex-col items-center">
+              <img className=" h-10 rounded w-10" src={logo} alt="" />
+              <span className="font-bold text-sm text-gray-100">CodeCamp</span>
+            </div>
           </Link>
 
           <div className="items-center space-x-3">
-            <Link rel="noopener noreferrer" to="/catalog">
-              Catalog
+            <Link rel="noopener noreferrer" to="/Career">
+              Career
             </Link>
             <Link rel="noopener noreferrer" to="/pricing">
               Pricing
@@ -50,20 +51,24 @@ function Header() {
                     title={user?.displayName}
                     src={user?.photoURL}
                     alt=""
-                    className="w-10 h-10 border inline-block rounded-full  border-gray-700"
+                    className="h-10 w-10 border inline-block rounded-full  border-gray-700"
                   />
                 </div>
 
                 <button
                   onClick={handleSignout}
-                  className="px-2 py-2 rounded-md bg-gray-500 text-gray-900"
+                  type="button"
+                  className="px-3 py-2 font-semibold rounded bg-gray-100 text-gray-800"
                 >
                   Log Out
                 </button>
               </>
             ) : (
               <Link to="/login">
-                <button className="px-2 py-2 rounded-md bg-violet-400 text-gray-900">
+                <button
+                  type="button"
+                  className="px-3 py-2 font-semibold rounded bg-violet-400 text-gray-800"
+                >
                   Log In
                 </button>
               </Link>

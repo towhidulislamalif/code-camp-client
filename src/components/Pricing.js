@@ -2,7 +2,7 @@ import React from 'react';
 
 function Pricing() {
   return (
-    <section className="py-6 bg-gray-800 text-gray-50">
+    <section className="min-h-screen py-6 bg-gray-800 text-gray-50">
       <div className="container mx-auto flex flex-col items-center justify-center max-w-lg p-4 lg:max-w-full sm:p-10 lg:flex-row">
         <div className="flex flex-col items-center justify-center flex-1 p-4 pb-8 sm:p-8 lg:p-16 bg-gray-900">
           <span className="text-sm">Basic</span>

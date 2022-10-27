@@ -2,13 +2,17 @@ import { createBrowserRouter } from 'react-router-dom';
 import Root from '../root/Root';
 import Error from '../components/Error';
 import Home from '../components/Home';
-import Catalog from '../components/Catalog';
+import Career from '../components/Career';
+import TopicDetails from '../components/TopicDetails';
+import Checkout from '../components/Checkout';
+import Protected from './Protected';
 import Pricing from '../components/Pricing';
 import Blogs from '../components/Blogs';
 import Faq from '../components/Faq';
 import Login from '../components/Login';
 import ForgotPassword from '../components/ForgotPassword';
 import Signup from '../components/Signup';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,8 +28,28 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/catalog',
-        element: <Catalog />,
+        path: '/career',
+        element: <Career />,
+      },
+      {
+        path: '/topic/:id',
+        element: <TopicDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://b610-lerning-platform-server-side-iota.vercel.app/career/${params.id}`
+          ),
+      },
+      {
+        path: '/checkout/:id',
+        element: (
+          <Protected>
+            <Checkout />
+          </Protected>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://b610-lerning-platform-server-side-iota.vercel.app/career/${params.id}`
+          ),
       },
       {
         path: '/pricing',

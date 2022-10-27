@@ -1,7 +1,8 @@
+import { clear } from '@testing-library/user-event/dist/clear';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 
 function Login() {
@@ -9,6 +10,11 @@ function Login() {
   const { signin, googleSignin, githubSignin } = useContext(AuthContext);
 
   const [error, setError] = useState('');
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   // form submit
   const handleSubmit = (event) => {
@@ -22,7 +28,9 @@ function Login() {
     // signin with email and password
     signin(email, password)
       .then((userCredential) => {
-        const user = userCredential.user;
+        // const user = userCredential.user;
+
+        navigate(from, { replace: true });
 
         // form reset
         event.target.reset();
