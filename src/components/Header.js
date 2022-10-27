@@ -43,22 +43,23 @@ function Header() {
           </div>
 
           <div className="items-center space-x-3">
+            <input type="checkbox" className="toggle toggle-sm" />
             {user?.uid ? (
               <>
-                <div className="inline-block relative flex-shrink-0">
-                  <span className="absolute bottom-0 right-0 w-4 h-4 bg-green-600 border rounded-full text-gray-100 border-gray-900"></span>
-                  <img
-                    title={user?.displayName}
-                    src={user?.photoURL}
-                    alt=""
-                    className="h-10 w-10 border inline-block rounded-full  border-gray-700"
-                  />
+                <div className="avatar online">
+                  <div className="w-12 rounded-full">
+                    <img
+                      title={user?.displayName}
+                      src={user?.photoURL}
+                      className="inline-block"
+                    />
+                  </div>
                 </div>
 
                 <button
                   onClick={handleSignout}
                   type="button"
-                  className="px-3 py-2 font-semibold rounded bg-gray-100 text-gray-800"
+                  className="px-2 py-2 font-semibold rounded bg-gray-100 text-gray-800"
                 >
                   Log Out
                 </button>
@@ -67,7 +68,7 @@ function Header() {
               <Link to="/login">
                 <button
                   type="button"
-                  className="px-3 py-2 font-semibold rounded bg-violet-400 text-gray-800"
+                  className="px-2 py-2 font-semibold rounded bg-violet-400 text-gray-800"
                 >
                   Log In
                 </button>
