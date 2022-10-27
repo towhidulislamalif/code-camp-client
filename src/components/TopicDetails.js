@@ -4,23 +4,13 @@ import { Link, useLoaderData } from 'react-router-dom';
 function TopicDetails() {
   const topic = useLoaderData();
   console.log(topic);
-  const {
-    duration,
-    description,
-    earn,
+  const { duration, description, earn, id, img, path, pricing } = topic;
 
-    id,
-    img,
-
-    path,
-    pricing,
-  } = topic;
   return (
     <section className="min-h-screen bg-gray-800 text-gray-100">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <div
           rel="noopener noreferrer"
-          href="#"
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900"
         >
           <img
@@ -31,17 +21,14 @@ function TopicDetails() {
           <div className="p-6 space-y-2 lg:col-span-5">
             <div className="flex items-center justify-between">
               <span className="text-sm font-bold px-2 py-1 bg-purple-700 text-gray-100">
-                {' '}
-                {pricing}{' '}
+                {pricing}
               </span>
               <span className="text-xs font-bold text-gray-100">
-                {' '}
-                {duration}{' '}
+                {duration}
               </span>
             </div>
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
-              {' '}
-              {path}{' '}
+              {path}
             </h3>
             <p> {description} </p>
             <br />

@@ -3,17 +3,14 @@ import { useLoaderData } from 'react-router-dom';
 
 function Checkout() {
   const topic = useLoaderData();
-  console.log(topic);
   const { earn, experience, path } = topic;
+
   return (
     <section className="min-h-screen py-6 bg-gray-800 text-gray-50">
       <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-        <div className="py-6 md:py-0 md:px-6">
-          <h1 className="text-4xl font-bold"> {path} </h1>
-          <p className="font-medium pt-2 pb-4"> {experience} </p>
-          <div className="space-y-4">
-            <p className="font-medium flex items-center">{earn}</p>
-          </div>
+        <div className="py-6 space-y-3 md:py-0 md:px-6">
+          <h1 className=" font-bold text-3xl"> {path} </h1>
+          <p className="font-bold flex items-center text-sm">{earn}</p>
         </div>
         <form
           noValidate=""
