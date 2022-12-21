@@ -1,56 +1,70 @@
 import React from 'react';
 
-function Faq() {
+const Faq = () => {
   return (
     <section className="min-h-screen bg-gray-800 text-gray-100">
       <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
-        <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">
-          How it works
-        </p>
         <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">
           Frequently Asked Questions
         </h2>
-        <div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
-          <div>
-            <h3 className="font-semibold">Lorem ipsum dolor sit amet.</h3>
-            <p className="mt-1 text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum
-              voluptatem consequatur ratione, doloremque debitis? Fuga labore
-              omnis minima, quisquam delectus culpa!
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold">Lorem ipsum dolor sit amet.</h3>
-            <p className="mt-1 text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum
-              voluptatem consequatur ratione, doloremque debitis? Fuga labore
-              omnis minima, quisquam delectus culpa!
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold">Lorem ipsum dolor sit amet.</h3>
-            <p className="mt-1 text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum
-              voluptatem consequatur ratione, doloremque debitis? Fuga labore
-              omnis minima, quisquam delectus culpa!
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold">Lorem ipsum dolor sit amet.</h3>
-            <p className="mt-1 text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
-              fugit? Aspernatur, ullam enim, odit eaque quia rerum ipsum
-              voluptatem consequatur ratione, doloremque debitis? Fuga labore
-              omnis minima, quisquam delectus culpa!
-            </p>
-          </div>
+        <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-300">
+          <details>
+            <summary className="py-2 outline-none cursor-pointer focus:underline">
+              How long does it take to complete a professional certificate?
+            </summary>
+            <div className="px-4 pb-4">
+              <p>
+                Time to complete a Professional Certificate can vary by subject
+                or how you choose to learn at your own pace. On average, a
+                Professional Certificate can be completed in less than 6 months
+                at 10 hours per week.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary className="py-2 outline-none cursor-pointer focus:underline">
+              What resources will be available for the job search process?
+            </summary>
+            <div className="px-4 pb-4">
+              <p>
+                In addition to hands-on projects designed to showcase your
+                experience, you'll get access to a 5-step job search guide to
+                help navigate the process. You’ll also get support to build a
+                standout resume and LinkedIn profile, virtual interview practice
+                for your specific industry, job, and experience level, and
+                access to the Professional Certificate Alumni Community to
+                network with other career switchers.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary className="py-2 outline-none cursor-pointer focus:underline">
+              What background knowledge is necessary?
+            </summary>
+            <div className="px-4 pb-4 space-y-2">
+              <p>
+                None! Whether you’re completely new to the job field or have had
+                some experience, an entry-level Professional Certificate doesn’t
+                require any background knowledge.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary className="py-2 outline-none cursor-pointer focus:underline">
+              Are professional certificates 100% online?
+            </summary>
+            <div className="px-4 pb-4 space-y-2">
+              <p>
+                Professional Certificates are completely online. You can access
+                your instructional videos, readings, and assignments anytime and
+                anywhere via the web or your mobile device.
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Faq;
