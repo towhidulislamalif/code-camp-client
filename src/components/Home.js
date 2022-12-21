@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCode, FaDesktop } from 'react-icons/fa';
 import { AiOutlineSetting } from 'react-icons/ai';
-import tech from '../assets/image/tech.webp';
+import tech from '../assets/image/tech.jpg';
 import { AuthContext } from '../context/AuthProvider';
 
 function Home() {
@@ -14,22 +14,23 @@ function Home() {
       <div className="p-6 space-y-8">
         <main>
           <div className="container mx-auto space-y-16">
-            <section className="bg-gray-800 text-gray-100">
+            <section className="">
               <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                   <h1 className="text-2xl font-bold leading-none sm:text-4xl">
                     Join the millions learning to code with Codecamp for free
                   </h1>
-                  <p className="mt-6 mb-8 text-base sm:mb-12">
+                  <p className="mt-6 mb-8 text-lg sm:mb-12">
                     Choose your career. We'll teach you the skills to get
                     job-ready.
                   </p>
+
                   <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                     {user?.uid ? (
                       <Link
                         rel="noopener noreferrer"
                         to="/career"
-                        className="px-8 py-3 text-base font-semibold bg-violet-500 text-white"
+                        className="px-6 py-2 text-base font-semibold bg-violet-500 text-gray-50"
                       >
                         Explore Career Path
                       </Link>
@@ -38,14 +39,14 @@ function Home() {
                         <Link
                           rel="noopener noreferrer"
                           to="/signup"
-                          className="px-8 py-3 text-base font-semibold bg-violet-500 text-white"
+                          className="px-6 py-2 text-base font-semibold bg-violet-500 text-gray-50"
                         >
                           Sign Up
                         </Link>
                         <Link
                           rel="noopener noreferrer"
                           to="/login"
-                          className="px-8 py-3 text-base font-semibold border border-gray-100"
+                          className="px-6 py-2 text-base font-semibold border border-gray-50"
                         >
                           Log In
                         </Link>
@@ -53,14 +54,21 @@ function Home() {
                     )}
                   </div>
                 </div>
-                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0">
-                  {/* fix */}
-                  <img src={tech} alt="" className="object-cover" />
+                <div className="outline-none border-none flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                  <img
+                    src={tech}
+                    alt=""
+                    className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+                  />
                 </div>
               </div>
             </section>
+
+            {/* hero */}
+
+            {/* build with code camp */}
             <section>
-              <h2 className="text-3xl font-bold lg:text-center text-violet-400">
+              <h2 className="text-3xl font-bold lg:text-center text-violet-500">
                 Building with Code camp is simple
               </h2>
               <section>
@@ -68,46 +76,51 @@ function Home() {
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <div>
                       <FaCode className="h-8 w-8" />
-                      <h1 className="mt-4 text-lg font-semibold text-white">
+                      <h1 className="mt-4 text-lg font-semibold text-gray-100">
                         UNDERSTAND THE FULL STACK
                       </h1>
-                      <p className="mt-2 text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Dignissim fusce tortor, ac sed malesuada blandit. Et mi
-                        gravida sem feugiat.
+                      <p className="mt-2 text-gray-300">
+                        Continually disintermediate premier process improvements
+                        after enterprise ideas. Competently synthesize
+                        client-based infomediaries with client-centered
+                        solutions.
                       </p>
                     </div>
 
                     <div>
                       <FaDesktop className="h-8 w-8" />
-                      <h1 className="mt-4 text-lg font-semibold text-white">
+                      <h1 className="mt-4 text-lg font-semibold text-gray-100">
                         BUILD A WEB APP
                       </h1>
-                      <p className="mt-2 text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Dignissim fusce tortor, ac sed malesuada blandit. Et mi
-                        gravida sem feugiat.
+                      <p className="mt-2 text-gray-300">
+                        Continually disintermediate premier process improvements
+                        after enterprise ideas. Competently synthesize
+                        client-based infomediaries with client-centered
+                        solutions.
                       </p>
                     </div>
 
                     <div>
                       <AiOutlineSetting className="h-8 w-8" />
-                      <h1 className="mt-4 text-lg font-semibold text-white">
+                      <h1 className="mt-4 text-lg font-semibold text-gray-100">
                         SHOW OFF YOUR SKILLS
                       </h1>
-                      <p className="mt-2 text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Dignissim fusce tortor, ac sed malesuada blandit. Et mi
-                        gravida sem feugiat.
+                      <p className="mt-2 text-gray-300">
+                        Continually disintermediate premier process improvements
+                        after enterprise ideas. Competently synthesize
+                        client-based infomediaries with client-centered
+                        solutions.
                       </p>
                     </div>
                   </div>
                 </div>
               </section>
             </section>
+
+            {/* stats */}
             <section className="text-gray-100">
               <div className="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
-                <h2 className="text-3xl font-bold text-violet-400">
+                <h2 className="text-3xl font-bold text-violet-500">
                   Fully compatible with
                 </h2>
                 <div className="flex flex-wrap justify-center lg:justify-between">
@@ -186,10 +199,11 @@ function Home() {
                 </div>
               </div>
             </section>
+            {/* extra */}
             <section>
               <div className="grid gap-6 lg:grid-cols-3">
                 <div className="p-6 rounded lg:p-8 lg:py-12 bg-gray-900">
-                  <h3 className="inline font-medium text-gray-50">
+                  <h3 className="inline font-medium text-gray-100">
                     Panel-based blocks.
                   </h3>
                   <p className="inline">
@@ -198,7 +212,7 @@ function Home() {
                   </p>
                 </div>
                 <div className="p-6 rounded lg:p-8 lg:py-12 bg-gray-900">
-                  <h3 className="inline font-medium text-gray-50">
+                  <h3 className="inline font-medium text-gray-100">
                     Responsive design.
                   </h3>
                   <p className="inline">
@@ -206,16 +220,18 @@ function Home() {
                   </p>
                 </div>
                 <div className="p-6 rounded lg:p-8 lg:py-12 bg-gray-900">
-                  <h3 className="inline font-medium text-gray-50">
+                  <h3 className="inline font-medium text-gray-100">
                     Premium support.
                   </h3>
                 </div>
               </div>
             </section>
+
+            {/* our team */}
             <section>
               <div className="container px-6 py-8 mx-auto">
-                <h2 className="text-3xl font-semibold text-center text-violet-400 capitalize lg:text-4xl">
-                  Our team is here to help you.
+                <h2 className="text-3xl font-semibold text-center text-violet-500 capitalize lg:text-4xl dark:text-white">
+                  Our team is here to help you
                 </h2>
 
                 <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -227,10 +243,10 @@ function Home() {
                     />
 
                     <div className="mt-2">
-                      <h3 className="text-lg font-medium text-gray-100">
+                      <h3 className="text-lg font-medium text-gray-200 dark:text-gray-200">
                         Ahmed Omer
                       </h3>
-                      <span className="mt-1 font-medium text-gray-300">
+                      <span className="mt-1 font-medium text-gray-300 dark:text-gray-300">
                         Full Stack Developer
                       </span>
                     </div>
@@ -244,10 +260,10 @@ function Home() {
                     />
 
                     <div className="mt-2">
-                      <h3 className="text-lg font-medium text-gray-100">
+                      <h3 className="text-lg font-medium text-gray-200 dark:text-gray-200">
                         Jane Doe
                       </h3>
-                      <span className="mt-1 font-medium text-gray-300">
+                      <span className="mt-1 font-medium text-gray-300 dark:text-gray-300">
                         Data Scientist
                       </span>
                     </div>
@@ -261,10 +277,10 @@ function Home() {
                     />
 
                     <div className="mt-2">
-                      <h3 className="text-lg font-medium text-gray-100">
+                      <h3 className="text-lg font-medium text-gray-200 dark:text-gray-200">
                         Steve Ben
                       </h3>
-                      <span className="mt-1 font-medium text-gray-300">
+                      <span className="mt-1 font-medium text-gray-300 dark:text-gray-300">
                         UI/UX
                       </span>
                     </div>
@@ -278,10 +294,10 @@ function Home() {
                     />
 
                     <div className="mt-2">
-                      <h3 className="text-lg font-medium text-gray-100">
+                      <h3 className="text-lg font-medium text-gray-200 dark:text-gray-200">
                         Patterson Johnson
                       </h3>
-                      <span className="mt-1 font-medium text-gray-300">
+                      <span className="mt-1 font-medium text-gray-300 dark:text-gray-300">
                         Software Engineer
                       </span>
                     </div>
@@ -289,9 +305,11 @@ function Home() {
                 </div>
               </div>
             </section>
+
+            {/* testimonial */}
             <section className="my-8">
               <div className="container mx-auto flex flex-col items-center pb-6 mb-4 md:p-10 md:px-12">
-                <h1 className="text-4xl font-semibold leading-none text-center">
+                <h1 className="text-3xl font-semibold leading-none text-center text-violet-500">
                   What our students are saying about us
                 </h1>
               </div>
@@ -308,11 +326,10 @@ function Home() {
                       <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
                     </svg>
                     <p className="px-6 py-1 text-lg italic">
-                      Compellingly customize out-of-the-box models with
-                      open-source innovation. Dynamically network robust
-                      meta-services rather than cutting-edge methodologies.
-                      Collaboratively fabricate resource-leveling innovation
-                      and.
+                      Proactively actualize functionalized portals whereas
+                      accurate manufactured products. Conveniently matrix
+                      revolutionary interfaces vis-a-vis state of the art web
+                      services. Objectively.
                     </p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -325,7 +342,7 @@ function Home() {
                     </svg>
                   </div>
                   <span className="w-12 h-1 my-2 rounded-lg bg-violet-600"></span>
-                  <p>Akash Ahmed</p>
+                  <p>Ahmed Ayman</p>
                 </div>
                 <div className="flex flex-col items-center max-w-lg mx-12 lg:mx-0">
                   <div className="relative text-center">
@@ -344,10 +361,10 @@ function Home() {
                       ></path>
                     </svg>
                     <p className="px-6 py-1 text-lg italic">
-                      Assertively predominate focused deliverables for
-                      market-driven ideas. Efficiently simplify B2B scenarios
-                      for impactful internal or "organic" sources. Assertively
-                      myocardinate premier.
+                      Assertively strategize business alignments whereas dynamic
+                      leadership. Collaboratively coordinate best-of-breed
+                      networks before technically sound infrastructures.
+                      Continually seize cross-unit best practices.
                     </p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

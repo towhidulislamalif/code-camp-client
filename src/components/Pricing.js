@@ -22,15 +22,13 @@ function Pricing() {
           )}
         </div>
         <div className="flex flex-col items-center justify-center flex-1 p-4 pb-8 text-center rounded-md sm:p-8 lg:p-16 bg-violet-400 text-gray-900">
-          <span className="text-sm font-semibold">Advanced</span>
-          <p className="text-5xl font-bold">89€</p>
+          <span className="text-sm font-semibold">Pro</span>
+          <p className="text-5xl font-bold">$19.99</p>
           <p className="font-semibold">
-            Nemo deserunt possimus quo provident recusandae! Dolores qui
-            architecto omnis pariatur eos voluptatibus sequi cum, non nesciunt
-            aspernatur a?
+            Build in-demand technical skills for work or a personal project
           </p>
           <Link to="/career">
-            <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 bg-gray-800 text-gray-50">
+            <button className="px-6 py-2 mt-6 text-lg font-semibold rounded sm:mt-12 bg-gray-800 text-gray-50">
               Try Pro for free
             </button>
           </Link>
