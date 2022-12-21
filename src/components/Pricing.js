@@ -21,7 +21,7 @@ function Pricing() {
             </Link>
           )}
         </div>
-        <div className="flex flex-col items-center justify-center flex-1 p-4 pb-8 text-center rounded-md sm:p-8 lg:p-16 bg-violet-400 text-gray-900">
+        <div className="flex flex-col items-center justify-center flex-1 p-4 pb-8 text-center sm:p-8 lg:p-16 bg-violet-400 text-gray-900">
           <span className="text-sm font-semibold">Pro</span>
           <p className="text-5xl font-bold">$19.99</p>
           <p className="font-semibold">
