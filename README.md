@@ -1,20 +1,16 @@
-# I'm Towhidul from Bangladesh, I do content on Design and Development. I really enjoy learning languages and frameworks like HTML, CSS, Bootstrap, Tailwind and Javascript, Reactjs, Nodejs, Expressjs and Mongodb.
-
 ## Code Camp
 - Code Camp is a platform for learning where students can learn new things. Create this website and add more features like authentication and authorization using MongoDB, Express, React, and Node.
 
 ### Overview
 
-### Links
-
+#### Links
 - Client Side Solution URL: [Solution URL here](https://github.com/towhidulislamalif/code-camp-client)
 - Server Side Solution URL: [Solution URL here](https://github.com/towhidulislamalif/code-camp-sever)
 - Live Site URL: [Live site URL here](https://codecamp-8f4e0.web.app/)
 
-## My process
+#### My process
 
-### Built with
-
+#### Built with
 - Mongodb
 - Expressjs
 - Reactjs
